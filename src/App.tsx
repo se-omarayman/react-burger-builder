@@ -1,5 +1,5 @@
 import React from "react";
-import BurgerBuilder from "./components/BurgerBuilder/BurgerBuilder";
+import BurgerBuilder from "./containters/BurgerBuilder/BurgerBuilder";
 import Layout from "./components/Layout/Layout";
 
 function App() {
