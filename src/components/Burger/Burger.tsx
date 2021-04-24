@@ -1,15 +1,21 @@
-import classes from "./burger.module.css";
+import classes from "./Burger.module.css";
 import BurgerIngredient from "./BurgerIngredient/BurgerIngredient";
-type Props = {
-   ingredients: {
-      [key: string]: number;
-   };
-};
+
+interface Props {
+   ingredients: Ingredients;
+}
+
+interface Ingredients {
+   meat: number;
+   salad: number;
+   cheese: number;
+   bacon: number;
+}
 
 const burger = ({ ingredients }: Props) => {
    let transformedIngredients: React.ReactNode[] | string = Object.keys(ingredients)
-      .map((igKey) => {
-         return [...Array(ingredients[igKey])].map((e, index) => (
+      .map((igKey: string) => {
+         return [...Array(ingredients[igKey as keyof Ingredients])].map((e, index) => (
             <BurgerIngredient key={igKey + index} type={igKey} />
          ));
       })

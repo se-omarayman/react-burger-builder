@@ -1,4 +1,4 @@
-import classes from "./burgerIngredient.module.css";
+import classes from "./BurgerIngredient.module.css";
 import React from "react";
 
 type Props = {

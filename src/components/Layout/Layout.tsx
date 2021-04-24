@@ -1,5 +1,5 @@
 import React from "react";
-import classes from "./layout.module.css";
+import classes from "./Layout.module.css";
 type Props = {
    children?: React.ReactNode;
 };
